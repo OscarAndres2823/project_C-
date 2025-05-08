@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oscar\\C#\\MiniprojectC#\\MiniprojectC#.csproj": {}
+    "C:\\Users\\oscar\\C#\\MiniprojectCsharp\\MiniprojectC#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oscar\\C#\\MiniprojectC#\\MiniprojectC#.csproj": {
+    "C:\\Users\\oscar\\C#\\MiniprojectCsharp\\MiniprojectC#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oscar\\C#\\MiniprojectC#\\MiniprojectC#.csproj",
+        "projectUniqueName": "C:\\Users\\oscar\\C#\\MiniprojectCsharp\\MiniprojectC#.csproj",
         "projectName": "MiniprojectC#",
-        "projectPath": "C:\\Users\\oscar\\C#\\MiniprojectC#\\MiniprojectC#.csproj",
+        "projectPath": "C:\\Users\\oscar\\C#\\MiniprojectCsharp\\MiniprojectC#.csproj",
         "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oscar\\C#\\MiniprojectC#\\obj\\",
+        "outputPath": "C:\\Users\\oscar\\C#\\MiniprojectCsharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config"
