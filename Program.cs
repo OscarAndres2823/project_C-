@@ -1,6 +1,6 @@
 ﻿using MiniprojectC_.UI;
 using MiniprojectC_.application.Services;
-using MiniprojectC_.infrastructure.mysql. ;
+using MiniprojectC_.infrastructure.mysql.repositories;
 
 class Program
 {
