@@ -34,7 +34,7 @@ class Program
             Console.WriteLine("2. Productos");
             Console.WriteLine("3. Empleados");
             Console.WriteLine("4. Proveedores");
-            Console.WriteLine("0. Salir");
+            Console.WriteLine("5. Salir");
             Console.Write("Selecciona una opción: ");
             var opcion = Console.ReadLine();
 
