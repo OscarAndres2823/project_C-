@@ -2,7 +2,7 @@ using System;
 
 namespace MiniprojectC_.domain.Entities;
 
-public class ClienteNuevo
+public class Cliente
 {
     public int Id { get; set; }
     public DateTime FechaNacimiento { get; set; }
