@@ -9,7 +9,7 @@ public class ConexionSingleton
 {
     private static ConexionSingleton? _instancia;
     private readonly string _connectionString;
-    private MySqlConnection? _conexion;
+    private readonly MySqlConnection? _conexion;
     public ConexionSingleton(string connectionString)
     {
         _connectionString = connectionString;
