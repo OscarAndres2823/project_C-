@@ -1,7 +1,7 @@
 using MiniprojectC_.domain.Entities;
 using MiniprojectC_.application.services;
 
-namespace MiniprojectC_.UI;
+namespace MiniprojectC_.application.UI.Proveedores;
 
 public class UIProveedor
 {
