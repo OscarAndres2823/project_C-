@@ -1,7 +1,7 @@
 using MiniprojectC_.domain.Entities;
 using MiniprojectC_.domain.Ports;
 
-namespace MiniprojectC_._application.Services;
+namespace MiniprojectC_.application.Services;
 
 public class ClienteService
 {

@@ -6,9 +6,13 @@ using MiniprojectC_.application.UI.Productos;
 using MiniprojectC_.application.UI.Empleados;
 using MiniprojectC_.application.UI.Terceros;
 using MiniprojectC_.application.UI.Proveedores;
+using MiniprojectC_.Application.UI.Arl;
+using MiniprojectC_.Application.UI.Eps;
 using MiniprojectC_.application.services;
 using MiniprojectC_.Repositories;
 using MiniprojectC_.infrastructure.mysql.Repositories;
+using MiniprojectC_.Application.Services;     // <- Servicio de CrudFaltante
+using MiniprojectC_.Application.UI;           // <- UI de CrudFaltante
 
 class Program
 {
@@ -17,19 +21,22 @@ class Program
         string connectionString = "server=localhost;user=root;password=123456;database=soe";
 
         // Servicios
-        var clienteService = new MiniprojectC_._application.Services.ClienteService(new ClienteRepository(connectionString));
+        var clienteService = new ClienteService(new ClienteRepository(connectionString));
         var productoService = new ProductoService(new ProductoRepository(connectionString));
         var empleadoService = new EmpleadoService(new EmpleadoRepository(connectionString));
         var proveedorService = new ProveedorService(new ProveedorRepository(connectionString));
-        var terceroService = new TerceroService(new TerceroRepository(connectionString)); 
+        var terceroService = new TerceroService(new TerceroRepository(connectionString));
+        var crudFaltanteService = new CrudFaltanteService(); // <- Servicio para los cruds adicionales
 
         // Interfaces de usuario
         var uiCliente = new UICliente(clienteService);
         var uiProducto = new UIProducto(productoService);
         var uiEmpleado = new UIEmpleado(empleadoService);
         var uiProveedor = new UIProveedor(proveedorService);
-        var uiTercero = new UITercero(terceroService); 
-
+        var uiTercero = new UITercero(terceroService);
+        var uiArl = new UIArl();
+        var uiEps = new UIEps();
+        var uiCrudFaltante = new CrudFaltanteUI(crudFaltanteService); // <- UI para los cruds adicionales
 
         while (true)
         {
@@ -40,6 +47,9 @@ class Program
             Console.WriteLine("3. Empleados");
             Console.WriteLine("4. Proveedores");
             Console.WriteLine("5. Terceros");
+            Console.WriteLine("6. ARL");
+            Console.WriteLine("7. EPS");
+            Console.WriteLine("8. Módulos Faltantes");
             Console.WriteLine("0. Salir");
             Console.Write("Selecciona una opción: ");
             var opcion = Console.ReadLine();
@@ -60,6 +70,15 @@ class Program
                     break;
                 case "5":
                     uiTercero.Menu();
+                    break;
+                case "6":
+                    uiArl.Menu();
+                    break;
+                case "7":
+                    uiEps.Menu();
+                    break;
+                case "8":
+                    uiCrudFaltante.MostrarMenu(); // <- Invoca el submenú con todos los cruds nuevos
                     break;
                 case "0":
                     return;
