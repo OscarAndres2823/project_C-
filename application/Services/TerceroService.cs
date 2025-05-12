@@ -1,40 +1,21 @@
-using MiniprojectC_.application.Ports;
 using MiniprojectC_.domain.Entities;
+using MiniprojectC_.infrastructure.mysql.Repositories;
 
 namespace MiniprojectC_.application.Services
 {
     public class TerceroService
     {
-        private readonly ITerceroRepository _terceroRepository;
+        private readonly TerceroRepository _repo;
 
-        public TerceroService(ITerceroRepository terceroRepository)
+        public TerceroService(TerceroRepository repo)
         {
-            _terceroRepository = terceroRepository;
+            _repo = repo;
         }
 
-        public void Crear(Tercero tercero)
-        {
-            _terceroRepository.Crear(tercero);
-        }
-
-        public List<Tercero> ObtenerTodos()
-        {
-            return _terceroRepository.ObtenerTodos();
-        }
-
-        public Tercero? ObtenerPorId(int id)
-        {
-            return _terceroRepository.ObtenerPorId(id);
-        }
-
-        public void Actualizar(Tercero tercero)
-        {
-            _terceroRepository.Actualizar(tercero);
-        }
-
-        public void Eliminar(int id)
-        {
-            _terceroRepository.Eliminar(id);
-        }
+        public void Crear(Tercero t) => _repo.Crear(t);
+        public List<Tercero> ObtenerTodos() => _repo.ObtenerTodos();
+        public Tercero? ObtenerPorId(int id) => _repo.ObtenerPorId(id);
+        public void Actualizar(Tercero t) => _repo.Actualizar(t);
+        public void Eliminar(int id) => _repo.Eliminar(id);
     }
 }
